@@ -1,6 +1,69 @@
 Q-1-Write a Python Program to find sum of array?
+A-1-
+l = [1,2,3,-412, 123, 369, 111]
+arraySum = 0
+for i in l:
+  arraySum += i    
+print("Sum of array: ", arraySum)
+
+
+
 Q-2-Write a Python Program to find largest element in an array?
+A-2-
+def find_largest_element(arr):
+  largest = arr[0]
+  for element in arr:
+    if element > largest:
+      largest = element
+  return largest
+
+arr = [10, 5, 8, 17, 3, 21, 1]
+largest_element = find_largest_element(arr)
+print("The largest element in the array is:",largest_element)
+
+
 Q-3-Write a Python Program for array rotation?
+A-3-
+l = [1,2,3,-412, 123, 369, 111]
+print("Rotated array:",l[::-1])
+
+
 Q-4-Write a Python Program to Split the array and add the first part to the end?
+A-4-
+def split_and_rotate_array(arr, n):
+  if n < 0 or n >= len(arr):
+    return arr
+  first_part = arr[:n]
+  second_part = arr[n:]
+  rotated_array = second_part + first_part
+  return rotated_array
+
+arr = [1, 2, 3, 4, 5]
+split_index = 2
+rotated_array = split_and_rotate_array(arr, split_index)
+print("Original array:", arr)
+print("Rotated array:", rotated_array)
+
+
+
+
 Q-5-Write a Python Program to check if given array is Monotonic?
+A-5-
+def is_monotonic(arr):
+  if all(arr[i] >= arr[i+1] for i in range(len(arr) - 1)):
+    return True
+  if all(arr[i] <= arr[i+1] for i in range(len(arr) - 1)):
+    return True
+  return False
+
+arr = [1, 2, 3, 4, 5]
+is_array_monotonic = is_monotonic(arr)
+if is_array_monotonic:
+  print("The array is monotonic.")
+else:
+  print("The array is not monotonic.")
+
+
+
+
 
