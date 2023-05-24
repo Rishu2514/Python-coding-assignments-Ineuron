@@ -1,7 +1,38 @@
 Q-1-Write a Python program to print "Hello Python"?
+A-1-print('Hello Python')
+
+
 Q-2-Write a Python program to do arithmetical operations addition and division.?
+A-2-
+a=2
+b=3
+add=a+b
+div=a/b
+print('the addition is: ',add)
+print('the division is: ',div)
+
+
 Q-3-Write a Python program to find the area of a triangle?
+A-3-
+base=5
+height=10
+area=base*height/2
+print('the area of triangle is:',area)
+
+
+
 Q-4-Write a Python program to swap two variables?
+A-4-
+var1=25
+var2=26
+var1,var2=var2,var1
+print('the values of variables are:var1=',var1,' and var2=',var2)
+
+
 Q-5-Write a Python program to generate a random number?
+A-5-import random as rd
+random_number=rd.randint(1,1000)
+print('random number: ',random_number)
+
 
 
