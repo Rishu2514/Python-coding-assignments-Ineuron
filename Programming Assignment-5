@@ -1,6 +1,124 @@
 Q-1-Write a Python Program to Find LCM?
+A-1-
+def calculate_lcm(num1, num2):
+  if num1 > num2:
+    greater = num1
+  else:
+    greater = num2
+  while True:
+    if greater % num1 == 0 and greater % num2 == 0:
+      lcm = greater
+      break
+    greater += 1
+  return lcm
+
+number1 = int(input("Enter the first number: "))
+number2 = int(input("Enter the second number: "))
+result = calculate_lcm(number1, number2)
+print("The LCM of", number1, "and", number2, "is", result)
+
+
 Q-2-Write a Python Program to Find HCF?
+A-2-
+def calculate_hcf(num1, num2):
+  while num2 != 0:
+    temp = num2
+    num2 = num1 % num2
+    num1 = temp
+  return num1
+  
+number1 = int(input("Enter the first number: "))
+number2 = int(input("Enter the second number: "))
+result = calculate_hcf(number1, number2)
+print("The HCF of", number1, "and", number2, "is", result)
+
+
+
 Q-3-Write a Python Program to Convert Decimal to Binary, Octal and Hexadecimal?
+A-3-
+def conversion(n):
+  print('binary: ',bin(n))
+  print('octal: ',oct(n))
+  print('hexadecimal: ',hex(n))
+
+n=int(input('enter your number :'))
+print(conversion(n))
+
+
+
 Q-4-Write a Python Program To Find ASCII value of a character?
+A-4-
+character = input("Enter a character: ")
+ascii_value = ord(character)
+print("ASCII value of", character, "is", ascii_value)
+
+
+
 Q-5-Write a Python Program to Make a Simple Calculator with 4 basic mathematical operations?
+A-5-
+x=int(input('enter first number: '))
+y=int(input('enter second number: '))
+print('addition:+\nsubstraction:-\nmultiplication:*\ndivision:/')
+op=input('enter the operation:')
+if op=='+':
+  o_p=x+y
+  print('the result is: ',o_p)
+elif op=='-':
+  o_p=x-y
+  print('the result is: ',o_p)
+elif op=='*':
+  o_p=x*y
+  print('the result is: ',o_p)
+elif op=='/':
+  o_p=x/y
+  print('the result is: ',o_p)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
