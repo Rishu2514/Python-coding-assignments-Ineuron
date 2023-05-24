@@ -1,8 +1,137 @@
 Q-1-Write a Python program to find words which are greater than given length k?
+A-1-
+def find_words_greater_than_length(word_list, k):
+  words_greater_than_k = []
+  for word in word_list:
+    if len(word) > k:
+      words_greater_than_k.append(word)
+  return words_greater_than_k
+
+word_list = ["apple", "banana", "cherry", "grapefruit", "kiwi", "mango"]
+k = 5
+result = find_words_greater_than_length(word_list, k)
+print(f"Words greater than length {k}: {result}")
+
+
+
 Q-2-Write a Python program for removing i-th character from a string?
+A-2-
+def remove_character(string, i):
+  if i >= 0 and i < len(string):
+    new_string = string[:i] + string[i+1:]
+    return new_string
+  else:
+    return string
+
+my_string = "Hello, World!"
+index = 7
+new_string = remove_character(my_string, index)
+print("Original string:", my_string)
+print("String after removing the", index, "th character:", new_string)
+
+
+
 Q-3-Write a Python program to split and join a string?
+A-3-
+def split_string(string, delimiter):
+  substrings = string.split(delimiter)
+  return substrings
+def join_string(substrings, delimiter):
+  new_string = delimiter.join(substrings)
+  return new_string
+
+my_string = "Hello,World!How,Are,You?"
+delimiter = ","
+substrings = split_string(my_string, delimiter)
+print("Substrings:", substrings)
+new_string = join_string(substrings, delimiter)
+print("Joined string:", new_string)
+
+
+
+
 Q-4-Write a Python to check if a given string is binary string or not?
+A-4-
+def is_binary_string(string):
+  valid_chars = {'0', '1'}
+  for char in string:
+    if char not in valid_chars:
+      return False
+  return True
+
+my_string = "101010"
+if is_binary_string(my_string):
+  print("The string is a binary string.")
+else:
+  print("The string is not a binary string.")
+  
+  
+  
+
 Q-5-Write a Python program to find uncommon words from two Strings?
+A-5-
+def find_uncommon_words(str1, str2):
+  words1 = str1.split()
+  words2 = str2.split()
+  uncommon_words = set(words1) ^ set(words2)
+  return uncommon_words
+
+string1 = "Hello world how are you?"
+string2 = "Hello there! How is it going?"
+uncommon_words = find_uncommon_words(string1, string2)
+print("Uncommon words:", uncommon_words)
+
+
+
+
 Q-6-Write a Python to find all duplicate characters in string?
+A-6-
+def find_duplicate_characters(string):
+  duplicates = set()
+  seen = set()
+  for char in string:
+    if char in seen:
+      duplicates.add(char)
+    else:
+      seen.add(char)
+
+  return duplicates
+
+my_string = "Hello, World!"
+duplicate_chars = find_duplicate_characters(my_string)
+print("Duplicate characters:", duplicate_chars)
+
+
+
+
 Q-7-Write a Python Program to check if a string contains any special character?
+A-7-
+import string as str
+def has_special_character(string):
+  special_chars = str.punctuation
+  for char in string:
+    if char in special_chars:
+      return True
+  return False
+
+my_string = "Hello, World!"
+if has_special_character(my_string):
+  print("The string contains special characters.")
+else:
+  print("The string does not contain any special characters.")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
