@@ -17,6 +17,7 @@ for i in range(0,11):
   print(f'{n} * {i} =',n*i)
   
   
+  
  
 Q-3-Write a Python Program to Print the Fibonacci sequence?
 A-3-
