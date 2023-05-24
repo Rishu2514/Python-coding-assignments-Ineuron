@@ -1,6 +1,43 @@
 Q-1-Write a Python program to convert kilometers to miles?
-Q-2-Write a Python program to convert Celsius to Fahrenheit?
+A-1-
+km=6
+miles=km/1.60934
+print('the required distance in miles is: ',miles)
+
+
+Q-2-Write a Python program to convert Celsius to Fahrenheit
+A-2-
+celsius=35
+fahrenheit=(celsius*1.8)+32
+print('the temperature in fahrenheit is: ',fahrenheit)
+
 Q-3-Write a Python program to display calendar?
+A-3-
+import calendar as cd
+year=2022
+month=10
+print(cd.month(year,month))
+year=2022
+print(cd.calendar(year))
+
 Q-4-Write a Python program to solve quadratic equation?
+A-4-
+import math as m
+print('ax^2+bx^1+c=0')
+print('please enter the coefficients a,b,c')
+a=int(input('enter the value of a:'))
+b=int(input('enter the value of b:'))
+c=int(input('enter the value of c:'))
+print(f"your quadratic equation is: {a}x^2+{b}x^1+{c}=0")
+d=(b**2)-(4*a*c)
+root1=(-1*b+m.sqrt(d))/(2*a)
+root2=(-1*b-m.sqrt(d))/(2*a)
+print(f'the roots of quadratic equations are {root1} and {root2}')
+
+
 Q-5-Write a Python program to swap two variables without temp variable?
+A-5-
+
+
+
 
