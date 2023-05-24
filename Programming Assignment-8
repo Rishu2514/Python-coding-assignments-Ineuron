@@ -1,6 +1,110 @@
 Q-1-Write a Python Program to Add Two Matrices?
+A-1-
+def add_matrices(matrix1, matrix2):
+  rows = len(matrix1)
+  columns = len(matrix1[0])
+
+  result = [[0 for _ in range(columns)] for _ in range(rows)]
+  for i in range(rows):
+    for j in range(columns):
+      result[i][j] = matrix1[i][j] + matrix2[i][j]
+  return result
+
+matrix1 = [[1, 2, 3],
+           [4, 5, 6],
+           [7, 8, 9]]
+
+matrix2 = [[9, 8, 7],
+           [6, 5, 4],
+           [3, 2, 1]]
+
+result_matrix = add_matrices(matrix1, matrix2)
+for row in result_matrix:
+  print(row)
+  
+  
+  
 Q-2-Write a Python Program to Multiply Two Matrices?
+A-2-
+def multiply_matrices(matrix1, matrix2):
+  rows1 = len(matrix1)
+  columns1 = len(matrix1[0])
+  rows2 = len(matrix2)
+  columns2 = len(matrix2[0])
+  if columns1 != rows2:
+    print("Error: The number of columns in matrix1 must be equal to the number of rows in matrix2.")
+    return None
+  result = [[0 for _ in range(columns2)] for _ in range(rows1)]
+
+  for i in range(rows1):
+    for j in range(columns2):
+      for k in range(rows2):
+        result[i][j] += matrix1[i][k] * matrix2[k][j]
+
+  return result
+
+matrix1 = [[1, 2, 3],
+           [4, 5, 6]]
+
+matrix2 = [[7, 8],
+           [9, 10],
+           [11, 12]]
+
+result_matrix = multiply_matrices(matrix1, matrix2)
+if result_matrix:
+  for row in result_matrix:
+    print(row)
+    
+    
+    
 Q-3-Write a Python Program to Transpose a Matrix?
+A-3-
+def transpose_matrix(matrix):
+  rows = len(matrix)
+  columns = len(matrix[0])
+  transposed_matrix = [[0 for _ in range(rows)] for _ in range(columns)]
+  for i in range(rows):
+    for j in range(columns):
+      transposed_matrix[j][i] = matrix[i][j]
+
+  return transposed_matrix
+
+matrix = [[1, 2, 3],
+          [4, 5, 6],
+          [7, 8, 9]]
+transposed_matrix = transpose_matrix(matrix)
+for row in transposed_matrix:
+  print(row)
+
+
+
 Q-4-Write a Python Program to Sort Words in Alphabetic Order?
+A-4-
+def sort_words(words):
+  sorted_words = sorted(words)
+  return sorted_words
+
+word_list = ['apple', 'banana', 'cherry', 'date', 'elderberry']
+sorted_list = sort_words(word_list)
+for word in sorted_list:
+  print(word)
+
+
+
 Q-5-Write a Python Program to Remove Punctuation From a String?
+A-5-
+import string
+def remove_punctuation(text):
+  translator = str.maketrans("", "", string.punctuation)
+  text_without_punctuation = text.translate(translator)
+  return text_without_punctuation
+
+text = "Hello, world! How are you today?"
+text_without_punctuation = remove_punctuation(text)
+print(text_without_punctuation)
+
+
+
+
+
 
