@@ -1,6 +1,128 @@
 Q-1-Write a Python program to check if the given number is a Disarium Number?
+A-1-
+def is_disarium_number(number):
+  num_str = str(number)
+  length = len(num_str)
+  digit_sum = 0
+  for i, digit_char in enumerate(num_str):
+    digit = int(digit_char)
+    digit_sum += digit ** (i + 1)
+    if digit_sum == number:
+      return True
+    else:
+      return False
+
+number = 175
+if is_disarium_number(number):
+  print(number, "is a Disarium number")
+else:
+  print(number, "is not a Disarium number")
+
+
+
 Q-2-Write a Python program to print all disarium numbers between 1 to 100?
+A-2-
+def is_disarium_number(number):
+  num_str = str(number)
+  length = len(num_str)
+  digit_sum = 0
+  for i, digit_char in enumerate(num_str):
+    digit = int(digit_char)
+    digit_sum += digit ** (i + 1)
+  if digit_sum == number:
+    return True
+  else:
+    return False
+
+print("Disarium numbers between 1 and 100:")
+for i in range(1, 101):
+  if is_disarium_number(i):
+    print(i)
+
+
+
 Q-3-Write a Python program to check if the given number is Happy Number?
+A-3-
+def is_happy_number(number):
+  def get_next_number(n):
+    digit_sum = 0
+    while n > 0:
+      digit = n % 10
+      digit_sum += digit ** 2
+      n //= 10
+    return digit_sum
+
+  slow = number
+  fast = get_next_number(number)
+  while fast != 1 and slow != fast:
+    slow = get_next_number(slow)
+    fast = get_next_number(get_next_number(fast))
+  return fast == 1
+
+number = 19
+if is_happy_number(number):
+  print(number, "is a Happy number")
+else:
+  print(number, "is not a Happy number")
+
+
+
 Q-4-Write a Python program to print all happy numbers between 1 and 100?
+A-4-
+def is_happy_number(number):
+  def get_next_number(n):
+    digit_sum = 0
+    while n > 0:
+      digit = n % 10
+      digit_sum += digit ** 2
+      n //= 10
+    return digit_sum
+
+  slow = number
+  fast = get_next_number(number)
+  while fast != 1 and slow != fast:
+    slow = get_next_number(slow)
+    fast = get_next_number(get_next_number(fast))
+  return fast == 1
+
+print("Happy numbers between 1 and 100:")
+for i in range(1, 101):
+  if is_happy_number(i):
+    print(i)
+
+
+
 Q-5-Write a Python program to determine whether the given number is a Harshad Number?
+A-5-
+def is_harshad_number(number):
+  digit_sum = sum(int(digit) for digit in str(number))
+  if number % digit_sum == 0:
+    return True
+  else:
+    return False
+
+number = 18
+if is_harshad_number(number):
+  print(number, "is a Harshad number")
+else:
+  print(number, "is not a Harshad number")
+
+
+
+
 Q-6-Write a Python program to print all pronic numbers between 1 and 100?
+A-6-
+def is_pronic_number(number):
+  for i in range(1, int(number ** 0.5) + 1):
+    if i * (i + 1) == number:
+      return True
+  return False
+
+print("Pronic numbers between 1 and 100:")
+for i in range(1, 101):
+  if is_pronic_number(i):
+    print(i)
+
+
+
+
