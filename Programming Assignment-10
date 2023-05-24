@@ -1,11 +1,115 @@
 Q-1-Write a Python program to find sum of elements in list?
+A-1-
+l = [2, 4, 1, 5, 6, 7]
+total = 0
+for i in l:
+    total += i
+print(total)
+
+
 Q-2-Write a Python program to  Multiply all numbers in the list?
+A-2-
+l = [2, 4, 1, 5, 6, 7]
+mul = 1
+for i in l:
+    mul *= i
+print(mul)
+
+
 Q-3-Write a Python program to find smallest number in a list?
+A-3-
+l = [2, 0, 1, 1235, 6, -7123]
+minimum = l[0]
+for i in l:
+  if i < minimum:
+    minimum = i
+print(minimum)
+
+
+
 Q-4-Write a Python program to find largest number in a list?
+A-4-
+l = [2, 0, 1, 1235, 6, -7123]
+maximum = l[0]
+for i in l:
+  if i > maximum:
+    maximum = i
+print(maximum)
+
+
+
 Q-5-Write a Python program to find second largest number in a list?
+A-5-
+l = [2, 0, 1, 1235, 6, -7123]
+l.sort(reverse=True)
+print("Second largest number:", l[1])
+
+
 Q-6-Write a Python program to find N largest elements from a list?
+A-6-
+def find_n_largest_elements(lst, n):
+  sorted_lst = sorted(lst, reverse=True)
+  return sorted_lst[:n]
+
+my_list = [10, 7, 23, 4, 18, 45, 27, 36]
+n = 3
+largest_elements = find_n_largest_elements(my_list, n)
+print(f"The {n} largest elements are: {largest_elements}")
+
+
+
 Q-7-Write a Python program to print even numbers in a list?
+A-7-
+l = [2, 0, 1, 1235, 6, -7123, 21, 54, 12, -23, -42]
+[ i for i in l if i%2 == 0]
+
+
 Q-8-Write a Python program to print odd numbers in a List?
+A-8-
+l = [2, 0, 1, 1235, 6, -7123, 21, 54, 12, -23, -42]
+[ i for i in l if i%2 == 1]
+
+
 Q-9-Write a Python program to Remove empty List from List?
+A-9-
+def remove_empty_lists(lst):
+  filtered_lst = [sublist for sublist in lst if sublist]
+  return filtered_lst
+
+my_list = [1, 2, [], 3, [], [], 4, [5, 6], [], 7]
+result_list = remove_empty_lists(my_list)
+print("List after removing empty lists:", result_list)
+
+
 Q-10-Write a Python program to Cloning or Copying a list?
+A-10-
+def clone_list(lst):
+  cloned_list = lst.copy() 
+  return cloned_list
+my_list = [1, 2, 3, 4, 5]
+cloned_list = clone_list(my_list)
+print("Original list:", my_list)
+print("Cloned list:", cloned_list)
+
 Q-11-Write a Python program to Count occurrences of an element in a list?
+A-11-
+def count_occurrences(lst, element):
+  count = lst.count(element)
+  return count
+my_list = [1, 2, 3, 4, 1, 2, 1, 1]
+element = 1
+occurrences = count_occurrences(my_list, element)
+print(f"The element {element} occurs {occurrences} times in the list.")
+
+
+
+
+
+
+
+
+
+
+
+
+
